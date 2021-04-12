@@ -33,7 +33,7 @@ stages:
         inputs:
           SonarCloud: 'Sonarcloud'
           organization: 'rwplyler'
-          scannerMode: 'MSBuild'
+          scannerMode: 'CLI'
           projectKey: 'rwplyler_cine'
 
       - script: |
@@ -42,7 +42,8 @@ stages:
           ng build --prod
         displayName: 'npm install and build'
         
-        
+      - task: SonarCloudAnalyze@1
+
       - task: ArchiveFiles@2
         displayName: 'Archive files'
         inputs:
