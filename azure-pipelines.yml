@@ -37,11 +37,21 @@ stages:
           projectKey: 'rwplyler_cine'
 
       - script: |
-          npm install -g @angular/cli
           npm install
-          ng build --prod
+          npx ng build --prod
         displayName: 'npm install and build'
         
+      - script: 
+          npx ng test --browsers ChromeHeadless --no-watch --code-coverage
+        displayName: ng test
+        
+      - task: SonarCloudAnalyze@1
+        
+      - task: SonarCloudPublish@1
+        inputs:
+          pollingTimeoutSec: '300'
+
+
 
       - task: ArchiveFiles@2
         displayName: 'Archive files'
