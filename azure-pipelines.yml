@@ -35,6 +35,7 @@ stages:
           organization: 'rwplyler'
           scannerMode: 'CLI'
           projectKey: 'rwplyler_cine'
+          extraProperties: 'sonar.test.inclusions=**/*.test.js'
 
       - script: |
           npm install -g @angular/cli
