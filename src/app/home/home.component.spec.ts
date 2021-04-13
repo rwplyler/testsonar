@@ -10,7 +10,19 @@ describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
+  class loginStub {
+    login(): any {
+      return ({
+        email: "rwplyler@yahoo.com",
+        firstName: "Ross",
+        lastName: "Plyler",
+        permissions: 1,
+        username: "rwplyler",
 
+      });
+    }
+    
+  };
   
   beforeEach(async () => {    
     TestBed.configureTestingModule({
@@ -35,6 +47,11 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should save Ross Name', () => {
+    component.login();
+    expect(component.userName).toBe('');
   });
 
 });

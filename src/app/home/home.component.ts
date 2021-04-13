@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
       console.log(data);
       this.loggedIn = data;
       console.log(this.loggedIn.username);
+      this.userName = this.loggedIn.userName;
       localStorage.setItem("loggedin",this.loggedIn.userName);
       return data;
     });
