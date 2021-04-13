@@ -51,8 +51,40 @@ describe('HomeComponent', () => {
 
   it('should save Ross Name', () => {
     component.userName ="rwplyler";
-    component.login();
-    expect(component.userName).toBe('rwplyler');
+    expect(component.login()).toBeTruthy;
   });
 
 });
+/*
+
+
+
+
+
+
+
+
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+
+
+
+
+
+8/*/
