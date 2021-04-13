@@ -37,13 +37,50 @@ stages:
           projectKey: 'rwplyler_cine'
 
       - script: |
+          npm install -g @angular/cli
           npm install
-          npx ng build --prod
-        displayName: 'npm install and build'
+          ng build --prod
+          npm run test-ci   
+          ls /coverage
+          ls     
+        displayName: 'npm install, unitTest and build'
+
+      # - script: |
+      #     npm install
+      #     npx ng build --prod
+      #   displayName: 'npm install and build'
         
-      - script: 
-          npx ng test --browsers ChromeHeadless --no-watch --code-coverage
-        displayName: ng test
+      # - task: Npm@1
+      #   displayName: 'Test Angular'
+      #   inputs:
+      #     command: custom
+      #     customCommand: run test -- --watch=false --code-coverage
+      #     workingDir: src/angular8
+
+      # - task: PublishCodeCoverageResults@1
+      #   displayName: 'Publish code coverage Angular results'
+      #   condition: succeededOrFailed()
+      #   inputs:
+      #     codeCoverageTool: Cobertura
+      #     summaryFileLocation: 'src/coverage/cobertura-coverage.xml'
+      #     reportDirectory: src/coverage
+      #     failIfCoverageEmpty: true
+      # - script: 
+      #     npx ng test --browsers ChromeHeadless --no-watch --code-coverage
+      #   displayName: ng test
+
+      # - task: PublishTestResults@2
+      #   inputs:
+      #     testResultsFormat: 'JUnit'
+      #     testResultsFiles: '**/TEST-*unit-test-result.xml'
+      # - script: ng test --watch=false --codeCoverage=true
+      #   displayName: 'Unit Tests'
+        
+      # - task: PublishTestResults@2
+      #   inputs:
+      #     testResultsFormat: 'JUnit'
+      #     testResultsFiles: '**/TESTS-*.xml'
+      #   displayName: 'Publish Test Results'
         
       - task: SonarCloudAnalyze@1
         
