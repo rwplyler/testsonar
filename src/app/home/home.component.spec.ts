@@ -50,8 +50,9 @@ describe('HomeComponent', () => {
   });
 
   it('should save Ross Name', () => {
+    component.userName ="rwplyler";
     component.login();
-    expect(component.userName).toBe('');
+    expect(component.userName).toBe('rwplyler');
   });
 
 });
