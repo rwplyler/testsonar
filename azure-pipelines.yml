@@ -13,21 +13,6 @@ variables:
   # Environment name
   environmentName: 'Cinephiliacs'
 
- # Node.js with Angular
-# Build a Node.js project that uses Angular.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
-trigger:
-- main
-
-variables:
-  # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'Azure subscription 1 (002adc1d-1fe0-4718-a5ae-20b73d943b4f)'
-  
-  # Environment name
-  environmentName: 'Cinephiliacs'
-
   # Web app name
   webAppName: 'Cinephiliacs'
 
