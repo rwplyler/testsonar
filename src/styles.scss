@@ -5,7 +5,7 @@ body{
     margin:0;
     font-family: 'Nunito','sans-serif';
     font-size: 18px;
-    background-color: #fcfaf8;
+    background-color: #f1eeea;
 }
 .container{
     width: 80%;
@@ -33,7 +33,7 @@ header{
             li a{
                 padding: 1em;
                 &:hover{
-                    background: darken(#8a7971,10);
+                    background: darken(#467aaa,10);
                 }
             }
         }

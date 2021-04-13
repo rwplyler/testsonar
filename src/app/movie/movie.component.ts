@@ -39,7 +39,7 @@ export class MovieComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.router.snapshot.params);
-    this.inputFeilds();
+    this.inputFields();
 
     this._login.getTopics().subscribe(data => {
       console.log(data);
@@ -87,6 +87,8 @@ export class MovieComponent implements OnInit {
     if(this.submitDiscussion.topic == "" || this.submitDiscussion.subject == "")
     {
       console.log("didn't submit discussion");
+    }else if(this.submitDiscussion.subject.length >= 250){
+      alert("Discussion should be less than 250 Characters")
     }else{
       this._login.submitDiscussion(this.submitDiscussion).subscribe(data => console.log(data));
     }
@@ -96,13 +98,15 @@ export class MovieComponent implements OnInit {
   postReview(){
     if(this.sumbitReview.rating ==0 || this.sumbitReview.text ==""){
       console.log("Review Not Sumbitted");
+    }else if(this.sumbitReview.text.length >= 250){
+      alert("Reviews should be less than 250 Characters")
     }else{
       this._login.postReview(this.sumbitReview).subscribe(data => console.log(data));
     }
     console.log(this.sumbitReview);
   }
   
-  inputFeilds(){
+  inputFields(){
     if(localStorage.getItem("loggedin")){
         console.log("userset");
         this.submitDiscussion.username = localStorage.getItem("loggedin");
