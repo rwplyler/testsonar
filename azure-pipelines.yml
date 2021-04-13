@@ -49,9 +49,10 @@ stages:
           npm install -g @angular/cli
           npm install
           ng build --prod
-          npm run test-ci   
-          ls /coverage
-          ls     
+          npx ng test --browsers ChromeHeadless --no-watch --code-coverage
+        # npm run test-ci   
+        # ls /coverage
+        # ls     
         displayName: 'npm install, unitTest and build'
 
       # - script: |
