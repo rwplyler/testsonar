@@ -35,7 +35,7 @@ stages:
           organization: 'rwplyler'
           scannerMode: 'CLI'
           projectKey: 'rwplyler_cine'
-          extraProperties: 'sonar.test.inclusions=**/*.test.js'
+          extraProperties: 'sonar.testExecutionReportPaths=reports/ut_report.xml'
 
       - script: |
           npm install -g @angular/cli
