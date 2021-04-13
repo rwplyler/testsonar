@@ -42,8 +42,10 @@ stages:
         inputs:
           SonarCloud: 'Sonarcloud'
           organization: 'rwplyler'
-          scannerMode: 'CLI'
+          scannerMode: 'Junit'
           configMode: 'file'
+        
+      
 
       - script: |
           npm install -g @angular/cli
