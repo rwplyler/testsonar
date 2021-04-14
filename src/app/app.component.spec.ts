@@ -34,10 +34,8 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('#search').textContent).toContain('Home');
   });
 
-  it('Title should be my-app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('my-app');
+  it('Should return num', () => {
+    expect(component.testCode(3)).toBe(3);
   });
 
 

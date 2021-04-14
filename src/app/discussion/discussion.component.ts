@@ -4,9 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 import { LoginService } from '../login.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-discussion',
+  templateUrl: './discussion.component.html',
+  styleUrls: ['./discussion.component.scss']
 })
 export class DiscussionComponent implements OnInit {
 

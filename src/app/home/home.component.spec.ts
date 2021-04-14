@@ -6,7 +6,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {HttpService} from '../http.service'
 import { RouterTestingModule } from '@angular/router/testing';
 import { LoginService} from '../login.service';
-
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
@@ -35,8 +34,6 @@ describe('HomeComponent', () => {
   });
 
   it('should create', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    const app = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 
