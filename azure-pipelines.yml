@@ -3,15 +3,18 @@ trigger:
     include:
     - main
 
+#the below is required only if you have multiple .sln files in your repo.
+  paths:
+    include:
+    - AngularDemo/memesaver
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '.'
+  solution: 'AngularDemo/memesaver'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
 steps:
   - task: SonarCloudPrepare@1
     inputs:
