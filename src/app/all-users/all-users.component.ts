@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllUsersComponent implements OnInit {
 
+  myNumber: number = 0;
+  myStrings: string = "";
   users:any;
   constructor(private http:HttpClient) { }
 
@@ -18,4 +20,15 @@ export class AllUsersComponent implements OnInit {
   });
   }
 
+  function1(): void {
+    this.myNumber++;
+  }
+
+  function2(s1: string, s2: string): void {
+    this.myStrings = s1 + s2;
+  }
+
+  function3(myString: string): string {
+    return myString + myString;
+  }
 }

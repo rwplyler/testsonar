@@ -25,19 +25,19 @@ module.exports = function (config) {
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
-    // coverageReporter: {
-    //   dir: require('path').join(__dirname, './coverage/my-app'),
-    //   subdir: '.',
-    //   reporters: [
-    //     { type: 'html' },
-    //     { type: 'text-summary' }
-    //   ]
-    // },
-    // junitReporter: {
-    //   outputDir: 'testresults/junit',
-    //   outputFile: 'unit-test-result.xml',
-    //   useBrowserName: false
-    // },
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage/my-app'),
+      subdir: '.',
+      reporters: [
+        { type: 'html' },
+        { type: 'text-summary' }
+      ]
+    },
+    junitReporter: {
+      outputDir: 'testresults/junit',
+      outputFile: 'unit-test-result.xml',
+      useBrowserName: false
+    },
     reporters: ['progress', 'kjhtml'/*, 'junit'*/],
     port: 9876,
     colors: true,
