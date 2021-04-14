@@ -30,13 +30,9 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
+        { type: 'text-summary' },
+        { type: "lcov" }
       ]
-    },
-    junitReporter: {
-      outputDir: 'testresults/junit',
-      outputFile: 'unit-test-result.xml',
-      useBrowserName: false
     },
     reporters: ['progress', 'kjhtml'/*, 'junit'*/],
     port: 9876,
