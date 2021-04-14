@@ -37,44 +37,8 @@ describe('AppComponent', () => {
   it('Should return num', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(component.testCode(3)).toBe(3);
+    expect(app.title).toEqual('my-app');
   });
 
 
 });
-/*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
