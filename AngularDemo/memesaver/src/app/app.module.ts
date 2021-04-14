@@ -1,34 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ListComponent } from './list/list.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieComponent } from './movie/movie.component';
-import { AllUsersComponent } from './all-users/all-users.component';
-import { UserComponent } from './user/user.component';
-import { DiscussionComponent } from './discussion/discussion.component';
+
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { PersondetailsComponent } from './persondetails/persondetails.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ListpersonsComponent } from './listpersons/listpersons.component';
+import { ListimagesComponent } from './listimages/listimages.component';
+import { PersonjustdetailsComponent } from './personjustdetails/personjustdetails.component';
+import { MemejustdetailsComponent } from './memejustdetails/memejustdetails.component';
+import { DemoComponent } from './demo/demo.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ListComponent,
-    MovieComponent,
-    AllUsersComponent,
-    UserComponent,
-    DiscussionComponent
+    LoginComponent,
+    PersondetailsComponent,
+    ListpersonsComponent,
+    ListimagesComponent,
+    PersonjustdetailsComponent,
+    MemejustdetailsComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,33 +1,11 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<header>
-  <div class="container">
-    <a class="logo" (onclick)= "reloadPage()"><img id="siteLogo" src="/assets/Cinephiliacs-Logo.png">Cinephiliacs</a>
-    <nav>
-      <ul>
-
-        <li><form [formGroup]="headerSearch" (ngSubmit)="onSubmit()"><input type="text" name="search" [(ngModel)]="test" placeholder="Search" formControlName="headSearch"><a href="/list/{{test}}/1">Search</a></form></li>
-        <li><a href="#" id="search" routerLink="/">Home</a></li>
-        <li><a href="/alluser" >Users</a></li>
-        
-      </ul>
-    </nav>
-  </div>
-  
-</header>
-<div class="play-container">
-  <p>
-      
-  </p>
-</div>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="title">
+  <h1>Welcome to {{title}}</h1>
 </div>
 
+<div>
+  <button><a routerLink='/'>Button TODO</a></button>&nbsp;
+  <button><a routerLink='/listpersons'>See a list of People</a></button>&nbsp;
+  <button><a routerLink='/listimages'>See all the memes</a></button>
+</div>
+
+<router-outlet></router-outlet>
