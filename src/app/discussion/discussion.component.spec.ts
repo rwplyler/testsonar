@@ -36,4 +36,32 @@ describe('DiscussionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Display spoilers should be false', () => {
+    const fixture = TestBed.createComponent(DiscussionComponent);
+    const app = fixture.componentInstance;
+    expect(app.displaySpoilers).toEqual(false);
+  });
 });
+/*
+
+rr
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r*/
